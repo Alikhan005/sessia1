@@ -124,6 +124,23 @@ img{ max-width: 100%; display: block; }
 }
 
 .hero__content{ position: relative; }
+.hero__introVideo{
+  margin: 16px auto 0;
+  width: min(720px, 90%);
+  border-radius: 18px;
+  border: 1px solid rgba(27,77,255,.35);
+  background: rgba(0,0,0,.7);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.hero__introVideo video{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+}
 .eyebrow{
   display: inline-flex;
   align-items: center;
