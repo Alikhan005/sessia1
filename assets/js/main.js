@@ -1,3 +1,15 @@
+function enforceTopOnLoad(){
+  if("scrollRestoration" in history){
+    history.scrollRestoration = "manual";
+  }
+
+  window.addEventListener("load", () => {
+    if(!location.hash){
+      window.scrollTo(0, 0);
+    }
+  });
+}
+
 function setupReveal(){
   const els = document.querySelectorAll(".reveal");
   const io = new IntersectionObserver((entries)=>{
@@ -40,6 +52,7 @@ function setupParallaxLogo(){
   onScroll();
 }
 
+enforceTopOnLoad();
 setupReveal();
 setupProgress();
 setupParallaxLogo();
